@@ -1,0 +1,4 @@
+StepDefinitions\stepDefs_Homepage.class
+StepDefinitions\Hooks.class
+StepDefinitions\stepDefs_ShopRegistration.class
+testRunners\testRunner.class
