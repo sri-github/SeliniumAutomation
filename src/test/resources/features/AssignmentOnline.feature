@@ -1,4 +1,8 @@
 
+Feature: Assignment Shop
+  This feature verifies Registration and Login functionalities
+
+  @smoke
  Scenario Outline: Verify if registration is successful for new user
     Given I launch Chrome browser and land in Sign-in page
     When I enter "<customer>" information
@@ -21,11 +25,6 @@
     Then I verify that Landing page is displayed
     And I verify that correct name and surname are displayed
 
-Feature: Assignment Shop
-  This feature verifies Registration and Login functionalities
-
-  @smoke
-  
   Scenario: Verify if user is able to search and product to checkout
     Given I launch Chrome browser and land in Sign-in page
     And I search for product "printed dress"
