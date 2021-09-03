@@ -1,3 +1,26 @@
+
+ Scenario Outline: Verify if registration is successful for new user
+    Given I launch Chrome browser and land in Sign-in page
+    When I enter "<customer>" information
+    And Click on Create Account button
+    Then I verify that Landing page is displayed
+    And I verify that correct name and surname are displayed
+
+    Examples: 
+      | customer           |
+      | TestAutomation1234 |
+
+  Scenario: Verify if logout is successful for logged in user
+    Given I am logged in
+    When I click on Logout button
+    Then I verify that I am in Homepage successfully
+
+  Scenario: Verify if login is successful for existing user
+    Given I launch Chrome browser and land in Sign-in page
+    And Click on Login button
+    Then I verify that Landing page is displayed
+    And I verify that correct name and surname are displayed
+
 Feature: Assignment Shop
   This feature verifies Registration and Login functionalities
 
