@@ -101,7 +101,7 @@ run "mvn clean eclipse:eclipse"
 
 Framework Setup steps
 ============================
-The URL, Browser Configuration, jdbc connections etc are defined in the respective config.properties file under each desired profile which you want to run.
+The URL, Browser Configuration are defined in the respective config.properties file under each desired profile which you want to run.
 In pom.xml we use the relative path within <profile.path> as shown below to invoke or make use of these profiles. 
 src/main/resources/profiles
 
