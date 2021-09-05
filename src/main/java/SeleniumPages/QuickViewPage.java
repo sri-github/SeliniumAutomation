@@ -67,11 +67,9 @@ public class QuickViewPage extends BasePage{
 	}
 	
 	public void clickGotoCheckout() {
-		switchToQuickViewFrame();
+//		switchToQuickViewFrame();
 		btn_ProceedCheckout.click();
-		driver.switchTo().defaultContent();
 		waitForPageLoad();
-		driver.switchTo().defaultContent();
 	}
 	
 }

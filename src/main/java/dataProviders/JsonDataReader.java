@@ -33,8 +33,8 @@ public class JsonDataReader {
 		}
 	}
 
-	public final Customer getCustomerByName(String customerName){
-		return customerList.stream().filter(x -> x.firstName.equalsIgnoreCase(customerName)).findAny().get();
+	public final Customer getCustomerByName(String emailAddress){
+		return customerList.stream().filter(x -> x.emailAddress.equalsIgnoreCase(emailAddress)).findAny().get();
 	}
 
 

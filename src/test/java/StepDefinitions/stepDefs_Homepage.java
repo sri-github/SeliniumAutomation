@@ -55,4 +55,9 @@ public class stepDefs_Homepage {
 		Assert.assertEquals("Sign in page not displayed",true,shopRegistrationPage.verifyRegistrationPageDisplayed());
 	}
 
+	@Given("^I verify that Sign-in page is displayed$")
+	public void i_verify_that_Sign_in_page_is_displayed() throws Throwable {
+		Assert.assertEquals("Sign in page not displayed",true,shopRegistrationPage.verifyRegistrationPageDisplayed());
+	}
+
 }

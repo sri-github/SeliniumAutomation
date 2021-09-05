@@ -12,17 +12,19 @@ Feature: Assignment Shop
 
     Examples: 
       | customer           |
-      | TestAutomation1234 |
+      | TestAutomation123456@gmail.com |
 
   Scenario: Verify if logout is successful for logged in user
-    Given I am logged in
+    Given I launch Chrome browser and land in Sign-in page
+    And I login as existing customer "TestAutomation123456@gmail.com"    
     When I click on Logout button
-    Then I verify that I am in Homepage successfully
+    Then I verify that Sign-in page is displayed
 
   Scenario: Verify if login is successful for existing user
     Given I launch Chrome browser and land in Sign-in page
     And Click on Login button
-    Then I verify that Landing page is displayed
+    Then I verify that Landing page is displayed    
+    And I login as existing customer "TestAutomation123456@gmail.com"        
     And I verify that correct name and surname are displayed
 
   Scenario: Verify if user is able to search and product to checkout
@@ -31,6 +33,7 @@ Feature: Assignment Shop
     Then I verify that valid products are displayed
     And I add any item to cart
     And I click Proceed to Checkout in Quick view and Cart Summary
-    And I Agree to Terms and Conditions in Shipping
+    And I login as existing customer "TestAutomation123456@gmail.com"
+    And I Checkout and Agree to Terms and Conditions in Shipping
     And verify valid product and item price is displayed in Payment page
     

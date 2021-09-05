@@ -1,7 +1,5 @@
 package SeleniumPages;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +10,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import testDataTypes.Customer;
 
 public class ShopRegistrationPage extends BasePage{
@@ -65,8 +62,8 @@ public class ShopRegistrationPage extends BasePage{
 	@FindAll(@FindBy(how = How.CSS, using = "#id_country"))
 	private WebElement drpdown_Country;	
 
-	@FindAll(@FindBy(how = How.CSS, using = "#id_state"))
-	private List<WebElement> drpdown_State;	
+	@FindBy(how = How.CSS, using = "#id_state")
+	private WebElement drpdown_State;	
 	
 	@FindBy(how = How.CSS, using = "#city") 
 	private WebElement txtbx_City;
@@ -99,6 +96,7 @@ public class ShopRegistrationPage extends BasePage{
 		
 	}
 	public void enter_Name(String name) {
+		visibilityOf(txtbx_FirstName);
 		txtbx_FirstName.sendKeys(name);
 	}
 	
@@ -109,6 +107,11 @@ public class ShopRegistrationPage extends BasePage{
 	public void enter_Email(String email) {
 		txtbx_Email.clear();
 		txtbx_Email.sendKeys(email);
+	}
+
+	public void enter_Password(String password) {
+		txtbx_Password.clear();
+		txtbx_Password.sendKeys(password);
 	}
 	
 	public void enter_Phone(String phone) {
@@ -122,9 +125,13 @@ public class ShopRegistrationPage extends BasePage{
 	public void enter_Address(String address) {
 		txtbx_Address.sendKeys(address);
 	}
-	
+
 	public void enter_PostCode(String postCode) {
 		txtbx_PostCode.sendKeys(postCode);
+	}
+
+	public void enter_State(String strState) {
+		new Select(drpdown_State).selectByVisibleText(strState);
 	}
 	
 	public void select_Country(String countryName) {
@@ -133,7 +140,7 @@ public class ShopRegistrationPage extends BasePage{
 	
 	
 	public void clickRegisterButton() {
-		btn_Register.submit();
+		btn_Register.click();
 	}
 	
 	public void enterEmailIdForCreation(Customer customer) {
@@ -159,6 +166,8 @@ public class ShopRegistrationPage extends BasePage{
 		enter_LastName(customer.lastName);
 		enter_Phone(customer.phoneNumber.mob);
 		enter_Email(customer.emailAddress);
+		enter_Password(customer.password);
+		enter_State(customer.address.state);
 		enter_City(customer.address.city);
 		enter_Address(customer.address.streetAddress);
 		enter_PostCode(customer.address.postCode);
@@ -170,4 +179,5 @@ public class ShopRegistrationPage extends BasePage{
 		enterPasswordForLogin(customer.password);
 		clickSignInButton();
 	}
+	
 }

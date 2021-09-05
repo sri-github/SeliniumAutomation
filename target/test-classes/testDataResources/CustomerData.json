@@ -1,20 +1,21 @@
 [	
 	{
-		"firstName": "TestAutomation1234",
-		"lastName": "ABC1",
+		"firstName": "TestAutomation",
+		"lastName": "ABC",
 		"age": 35,
 		"emailAddress": "TestAutomation1234@Gmail.com",
-		"password": "password1",
+		"password": "Pass@1234",
 		"address": {
 			
-			"addressfirstName": "TestAutomation1234",
-			"addresslastName": "ABC1",
+			"addressfirstName": "TestAutomation",
+			"addresslastName": "ABC",
 			"streetAddress": "3699 E FOOTHILL BL",
 			"city": "LOS ANGELES",
 			"postCode": "91107",
-			"state": "CA",
+			"state": "California",
 			"country": "United States"
 		},
+		
 		"phoneNumber": {
 			"mob": "(626)351-6101"
 		},
@@ -22,7 +23,7 @@
 		
 	},
 	{
-		"firstName": "TestAutomation9876",
+		"firstName": "Testautomation",
 		"lastName": "ABC",
 		"age": 35,
 		"emailAddress": "TestAutomation123456@Gmail.com",
@@ -34,7 +35,7 @@
 			"streetAddress": "27741 CROWN VALLEY PKWY 207",
 			"city": "MISSION VIEJO",
 			"postCode": "92691",
-			"state": "CA",
+			"state": "California",
 			"country": "United States"
 		},
 		"phoneNumber": {
