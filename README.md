@@ -1,4 +1,4 @@
-a==================================================================================
+==================================================================================
 BDD Cucumber Selenium Webdriver Java Test Automation Framework
 ==================================================================================
 This project is a template test automation framework, which provides structured and standard way of 
